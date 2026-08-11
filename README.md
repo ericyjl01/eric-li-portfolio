@@ -1,4 +1,4 @@
-# eric-li.me
+# eric-li.ca
 
 Personal portfolio — Data Analytics & AI Engineering. Built with [Astro](https://astro.build).
 
@@ -26,7 +26,7 @@ All copy, projects, skills, and links live in **`src/data/content.ts`** — edit
 ## Deploy (Vercel + GoDaddy domain)
 
 1. Push to GitHub, import the repo in Vercel (framework auto-detected as Astro).
-2. Add `eric-li.me` under the Vercel project's **Domains**.
+2. Add `eric-li.ca` under the Vercel project's **Domains**.
 3. In GoDaddy DNS: `A @ → 76.76.21.21` and `CNAME www → cname.vercel-dns.com`.
 4. Vercel provisions HTTPS automatically.
 

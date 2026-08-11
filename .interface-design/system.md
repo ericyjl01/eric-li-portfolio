@@ -1,4 +1,4 @@
-# Interface Design System — eric-li.me
+# Interface Design System — eric-li.ca
 
 Direction saved from the "Index" build. Hold to these on future edits.
 
