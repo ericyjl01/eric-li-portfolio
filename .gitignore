@@ -1,0 +1,16 @@
+# build output
+dist/
+# deps
+node_modules/
+# generated types
+.astro/
+# env
+.env
+.env.production
+# macOS
+.DS_Store
+# logs
+npm-debug.log*
+
+# résumé / personal PDFs — kept off git
+public/*.pdf

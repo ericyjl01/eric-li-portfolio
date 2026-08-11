@@ -1,0 +1,45 @@
+---
+import '../styles/global.css';
+import { profile } from '../data/content';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+const {
+  title = `${profile.name} — ${profile.role}`,
+  description = profile.lede,
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+    <title>{title}</title>
+    <meta name="description" content={description} />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={Astro.site} />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- No-flash theme: run before paint -->
+    <script is:inline>
+      (() => {
+        const saved = localStorage.getItem('theme');
+        const sys = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        document.documentElement.dataset.theme = saved || sys;
+      })();
+    </script>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
