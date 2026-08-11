@@ -12,6 +12,10 @@ const rails = [
   { label: 'Dashboards', items: dashboards, all: { label: 'View on Tableau Public', href: '#' } },
   { label: 'Writeups', items: writeups, all: { label: 'Read the blog', href: '#' } },
 ];
+
+// Case-study links only render once their /work/<slug> page actually exists —
+// prevents shipping 404s. Add the href here when you build each page (P1+).
+const PUBLISHED_CASE_STUDIES = new Set<string>([]);
 ---
 
 <Base>
@@ -78,7 +82,7 @@ const rails = [
               </div>
             </div>
             <div class="right">
-              {caseLink && <a class="go" href={caseLink.href}>Case study <span class="arw">→</span></a>}
+              {caseLink && PUBLISHED_CASE_STUDIES.has(caseLink.href) && <a class="go" href={caseLink.href}>Case study <span class="arw">→</span></a>}
               {side && (
                 <a class="repo-link" href={side.href} target={side.href.startsWith('http') ? '_blank' : undefined} rel="noopener">
                   {side.kind === 'repo' && <Fragment set:html={gh} />}
