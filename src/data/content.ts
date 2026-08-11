@@ -15,9 +15,9 @@ export const profile = {
 
 export const socials = {
   email: 'Ericyj.li@mail.utoronto.ca',
-  github: 'https://github.com/ericli', // TODO: replace with your real GitHub URL
-  githubHandle: 'github.com/ericli', // TODO: replace
-  linkedin: 'https://www.linkedin.com/in/ericli', // TODO: replace
+  github: 'https://github.com/ericyjl01',
+  githubHandle: 'github.com/ericyjl01',
+  linkedin: 'https://www.linkedin.com/in/ericli', // TODO: replace with your real LinkedIn URL
   // Résumé is kept OFF GitHub by choice. Paste a HOSTED pdf link here
   // (e.g. a Google Drive / Dropbox "anyone with the link" URL) and the
   // Résumé links across the site will appear automatically. Empty = hidden.
